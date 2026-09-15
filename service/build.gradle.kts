@@ -14,7 +14,10 @@ repositories {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
+    api(project(":repo"))
+
+    implementation("org.springframework:spring-context:6.1.14")
 
     testImplementation(platform("org.junit:junit-bom:6.0.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
@@ -26,6 +29,7 @@ java {
         languageVersion.set(JavaLanguageVersion.of(25))
     }
 }
+
 
 tasks.test {
     useJUnitPlatform()

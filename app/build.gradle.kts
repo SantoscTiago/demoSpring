@@ -14,7 +14,11 @@ repositories {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    api(project(":http"))
+
+    // Spring
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    runtimeOnly("org.postgresql:postgresql")
 
     testImplementation(platform("org.junit:junit-bom:6.0.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
