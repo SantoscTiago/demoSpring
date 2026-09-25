@@ -15,9 +15,10 @@ repositories {
 
 dependencies {
 
-    api(project(":repo"))
+    implementation(project(":repo"))
 
     implementation("org.springframework:spring-context:6.1.14")
+    implementation("jakarta.inject:jakarta.inject-api:2.0.1")
 
     testImplementation(platform("org.junit:junit-bom:6.0.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")

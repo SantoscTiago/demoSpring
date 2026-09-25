@@ -1,3 +1,7 @@
+DROP TABLE IF EXISTS athletes;
+DROP TABLE IF EXISTS clubs;
+DROP TABLE IF EXISTS users;
+
 CREATE TABLE users
 (
     id          SERIAL PRIMARY KEY,
@@ -20,6 +24,6 @@ CREATE TABLE athletes
     id         SERIAL PRIMARY KEY,
     name       VARCHAR(100),
     gender     VARCHAR(20) NOT NULL,
-    club_id    INT REFERENCES clubs (id),
+    club_id    INT REFERENCES clubs (id),  
     created_at BIGINT NOT NULL
 );

@@ -15,6 +15,7 @@ repositories {
 
 dependencies {
     api(project(":service"))
+    api(project(":repo"))
 
     implementation("org.springframework:spring-webmvc:7.0.7")
     testImplementation(platform("org.junit:junit-bom:6.0.0"))
