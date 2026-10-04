@@ -17,4 +17,12 @@ public class UserService {
     public List<User> findAll(){
         return userRepo.findAll();
     }
+
+    public User create(String username, String password) {
+        User user = new User();
+        user.setUsername(username);
+        user.setPassword(password);
+        user.setCreatedAt(System.currentTimeMillis());
+        return userRepo.save(user);
+    }
 }
